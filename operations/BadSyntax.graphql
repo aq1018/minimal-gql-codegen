@@ -1,0 +1,3 @@
+# query BadSyntax {
+#   this should trigger @graphql-codegen to fail
+# }

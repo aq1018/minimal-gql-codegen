@@ -1,0 +1,6 @@
+query FetchMovie($id: ID!) {
+  movie(id: $id) {
+    id
+    name
+  }
+}

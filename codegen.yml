@@ -1,0 +1,21 @@
+overwrite: true
+documents:
+  - "operations/*.graphql"
+schema: schema.graphql
+generates:
+  possibleTypes.ts:
+    plugins:
+      - fragment-matcher
+  generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+
+config:
+  namingConvention:
+    enumValues: keep
+  scalars:
+    ISO8601Date: string
+    ISO8601DateTime: string
+    ValidationErrors: "{ [key: string]: string[] } | {}"
